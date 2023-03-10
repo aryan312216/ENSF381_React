@@ -1,6 +1,6 @@
 //  import React, { useState, useEffect } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+// import ReactQuill from "react-quill";
+// import "react-quill/dist/quill.snow.css";
 // import  { useRef, useState  } from 'react';
 // import JoditEditor from 'jodit-react';
 // import { Jodit } from 'jodit-react';
@@ -36,12 +36,13 @@ const Main = ({ activeNote, onUpdateNote,  onDeleteNote  }) => {
           placeholder="Untitled"
           value={activeNote.title}
           onChange={(e) => onEditField("title", e.target.value)}
+          className="editor"
           autoFocus
          
           
         />
         <div className="button-group">
-        <button onClick={(e) => onDeleteNote(activeNote.id)}>Save</button>
+        <button>Save</button>
         <span style={{marginLeft: "30px"}} />
         <button onClick={(e) => onDeleteNote(activeNote.id)}>Delete</button>
         </div>
@@ -49,19 +50,19 @@ const Main = ({ activeNote, onUpdateNote,  onDeleteNote  }) => {
         
          
          
-        {/* <textarea
+        <textarea
           id="body"
           placeholder="Your note here"
           
           value={activeNote.body}
           onChange={(e) => onEditField("body", e.target.value)}
-        /> */}
-        <ReactQuill 
+        />
+        {/* <ReactQuill 
          id="body" 
          theme="snow"
          value={activeNote.body} 
          onChange={(e) => onEditField("body", e.target.value)} 
-         className="editor" />
+         className="editor" /> */}
         {/* <JoditEditor
          
          ref={editor}
