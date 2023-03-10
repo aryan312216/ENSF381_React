@@ -21,7 +21,7 @@ function App() {
       id: uuid(),
       title: "Untitled",
       lastModified: Date.now(),
-      body: ".....",
+      body: "",
      
     };
 
